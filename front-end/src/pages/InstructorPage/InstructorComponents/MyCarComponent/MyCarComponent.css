@@ -1,0 +1,120 @@
+.car-info-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 2rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+.car-info-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 1rem;
+}
+
+.car-info-icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  color: #3498db;
+}
+
+.car-info-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.car-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.car-detail-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.car-detail-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.car-detail-label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.car-detail-value {
+  font-size: 1.2rem;
+  color: #34495e;
+  font-weight: 600;
+}
+
+.maintenance-history {
+  margin-top: 2rem;
+}
+
+.maintenance-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.maintenance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.maintenance-table th {
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  color: white;
+  text-align: left;
+  padding: 12px;
+}
+
+.maintenance-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.maintenance-table tr:hover {
+  background-color: #f5f9ff;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  min-width: 100px;
+}
+
+.status-completed {
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  box-shadow: 0 3px 6px rgba(46, 204, 113, 0.3);
+}
+
+.status-scheduled {
+  background: linear-gradient(45deg, #f39c12, #f1c40f);
+  box-shadow: 0 3px 6px rgba(243, 156, 18, 0.3);
+}
+
+.status-overdue {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  box-shadow: 0 3px 6px rgba(231, 76, 60, 0.3);
+}

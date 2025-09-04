@@ -1,0 +1,427 @@
+.analytics-container {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f0f2ff 0%, #e6f3ff 100%);
+  min-height: 100vh;
+  border-radius: 50px;
+}
+
+.analytics-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3b4cb8;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(59, 76, 184, 0.2);
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex: 1;
+  text-align: center;
+}
+
+.tab-button:hover {
+  color: white;
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+}
+
+/* Analytics Sections */
+.analytics-section h3 {
+  font-size: 28px;
+  color: #3b4cb8;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+}
+
+.analytics-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  border-radius: 2px;
+}
+
+/* KPI Grid - Компактний дизайн */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.kpi-card {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.kpi-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+}
+
+.kpi-card:nth-child(1) {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+}
+
+.kpi-card:nth-child(2) {
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+}
+
+.kpi-card:nth-child(3) {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+}
+
+.kpi-card:nth-child(4) {
+  background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+}
+
+.kpi-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-value {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Charts Grid - Графіки в одному рядку */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.chart-card h4 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3b4cb8;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f2ff;
+}
+
+/* Tables - Покращений дизайн */
+.table-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.table-card h4 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #3b4cb8;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f2ff;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 15px 12px;
+  text-align: center; /* Змінено з left на center */
+  border-bottom: 1px solid #c8c0c0;
+  border-right: 1px solid #c8c0c0; /* Додано межі між стовпцями */
+}
+
+.stats-table th:last-child,
+.stats-table td:last-child {
+  border-right: none; /* Прибираємо праву межу для останнього стовпця */
+}
+
+.stats-table th {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.stats-table tr:hover {
+  background: linear-gradient(135deg, #f0f2ff 0%, #e6f3ff 100%);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+.stats-table tr:last-child td {
+  border-bottom: none; /* Прибираємо нижню межу для останнього рядка */
+}
+
+.stats-table td {
+  font-weight: 500;
+  color: #495057;
+}
+
+/* Loading and Error States */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  color: #666;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f0f2ff;
+  border-top: 4px solid #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  text-align: center;
+  padding: 60px;
+  color: #dc3545;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.error-message h3 {
+  margin: 0 0 15px 0;
+  color: #dc3545;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.retry-button {
+  background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.retry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-container {
+    padding: 15px;
+  }
+  
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tab-navigation {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  .tab-button {
+    margin-bottom: 5px;
+  }
+  
+  .kpi-card {
+    padding: 15px;
+  }
+  
+  .kpi-value {
+    font-size: 24px;
+  }
+  
+  .analytics-section h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .analytics-title {
+    font-size: 24px;
+  }
+  
+  .stats-table th,
+  .stats-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.kpi-value.pending {
+  color: #f5b94b; /* Orange */
+}
+
+.kpi-value.approved {
+  color: #3ef83e; /* Dark Green */
+}
+
+.kpi-value.rejected {
+  color: #f15473; /* Crimson Red */
+}
+
+.unassigned {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.assigned {
+  color: #00aa00;
+  font-weight: bold;
+}
+
+
+
+
+/* Змінимо тільки медіа-запити для розміру шрифту */
+@media (max-width: 1200px) {
+  .tab-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tab-button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tab-button {
+    font-size: 11px;
+  }
+}

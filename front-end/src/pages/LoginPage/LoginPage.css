@@ -1,0 +1,288 @@
+.login-container {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 70px 40px;
+  border-radius: 20px;
+  animation: fadeInUp 0.7s ease-out;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s ease-in-out;
+  position: relative;
+  z-index: 10;
+  height: 560px;
+}
+
+.login-container:hover {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25), 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.login-page-h1 {
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: 48px;
+  color: #333;
+  font-weight: 700;
+  position: relative;
+  animation: fadeIn 1s ease-in, pulse 2.5s infinite 1s, tiltAnimation 3s ease-in-out infinite 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.09);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes tiltAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.username-password-labels {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+}
+
+.username-password-inputs {
+  padding: 16px 18px;
+  font-size: 17px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.username-password-inputs:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+}
+
+.login-button {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(110, 142, 251, 0.4);
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 30px rgba(110, 142, 251, 0.5);
+}
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+.login-button::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.login-button:focus::after,
+.login-button:active::after {
+  transform: scale(3);
+  opacity: 1;
+  transition: transform 0.4s ease-out, opacity 0.6s ease-out;
+}
+
+.car-container {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  z-index: 5;
+  animation: carMove 8s linear infinite;
+}
+
+@keyframes carMove {
+  0% {
+    left: -20%;
+    transform: translateX(0);
+  }
+  100% {
+    left: 120%;
+    transform: translateX(0);
+  }
+}
+
+.car-body {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  background: linear-gradient(to bottom, #3a7bd5, #304e8a);
+  border-radius: 20px 60px 0 10px;
+  top: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.car-top {
+  position: absolute;
+  width: 120px;
+  height: 30px;
+  background: linear-gradient(to bottom, #3a7bd5, #263c6a);
+  border-radius: 30px 40px 0 0;
+  top: -10px;
+  left: 40px;
+}
+
+.window-front {
+  position: absolute;
+  width: 40px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  top: 5px;
+  left: 50px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.window-back {
+  position: absolute;
+  width: 35px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  top: 5px;
+  right: 40px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.car-light-front {
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: #ffeb3b;
+  border-radius: 5px;
+  top: 35px;
+  right: 5px;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.8);
+}
+
+.car-light-back {
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: #f44336;
+  border-radius: 5px;
+  top: 35px;
+  left: 10px;
+  box-shadow: 0 0 15px rgba(244, 67, 54, 0.8);
+}
+
+.wheel {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #212121;
+  border-radius: 50%;
+  bottom: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.wheel::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #424242;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+
+.wheel::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #e0e0e0;
+  top: 50%;
+  left: 10px;
+  transform-origin: center;
+  animation: wheelSpin 1s linear infinite;
+}
+
+.wheel-front {
+  right: 30px;
+}
+
+.wheel-back {
+  left: 30px;
+}
+
+@keyframes wheelSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
